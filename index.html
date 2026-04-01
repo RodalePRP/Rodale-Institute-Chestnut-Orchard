@@ -3,38 +3,34 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>GitHub Pages Site Template</title>
-  <meta name="description" content="A clean, responsive GitHub Pages starter template." />
+  <title>Rodale Institute Chestnut Orchard</title>
+  <meta name="description" content="A showcase of featured Chinese chestnut cultivars in the Rodale Institute Chestnut Orchard." />
   <style>
     :root {
-      --bg: #0b1020;
-      --panel: #121936;
-      --panel-2: #182247;
-      --text: #e9eefc;
-      --muted: #b6c2e1;
-      --accent: #7cc7ff;
-      --accent-2: #8ef0c0;
-      --border: rgba(255,255,255,0.1);
-      --shadow: 0 20px 50px rgba(0,0,0,0.25);
-      --maxw: 1100px;
-      --radius: 18px;
+      --bg: #f6f1e7;
+      --panel: #fffaf2;
+      --text: #2d2418;
+      --muted: #6d604d;
+      --accent: #7f4f24;
+      --accent-2: #b08968;
+      --border: rgba(45,36,24,0.12);
+      --shadow: 0 14px 32px rgba(45, 36, 24, 0.08);
+      --maxw: 1220px;
+      --radius: 22px;
     }
 
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
     body {
       margin: 0;
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-family: Georgia, "Times New Roman", serif;
+      background: linear-gradient(180deg, #f9f5ec 0%, #f1e7d5 100%);
       color: var(--text);
-      background:
-        radial-gradient(circle at top left, rgba(124,199,255,0.18), transparent 28%),
-        radial-gradient(circle at top right, rgba(142,240,192,0.14), transparent 24%),
-        var(--bg);
       line-height: 1.6;
     }
 
     a { color: inherit; text-decoration: none; }
-    img { max-width: 100%; display: block; }
+    img { display: block; max-width: 100%; }
 
     .container {
       width: min(100% - 2rem, var(--maxw));
@@ -44,9 +40,9 @@
     .nav {
       position: sticky;
       top: 0;
-      z-index: 20;
-      backdrop-filter: blur(12px);
-      background: rgba(11, 16, 32, 0.72);
+      z-index: 50;
+      background: rgba(249, 245, 236, 0.96);
+      backdrop-filter: blur(10px);
       border-bottom: 1px solid var(--border);
     }
 
@@ -59,228 +55,140 @@
     }
 
     .brand {
-      font-weight: 800;
+      font-size: 1.1rem;
+      font-weight: 700;
       letter-spacing: 0.02em;
+      color: var(--accent);
+      white-space: nowrap;
     }
 
-    .nav-links {
+    .menu {
       display: flex;
-      gap: 1rem;
-      align-items: center;
+      gap: 0.55rem;
       flex-wrap: wrap;
+      justify-content: flex-end;
     }
 
-    .nav-links a {
-      color: var(--muted);
-      font-size: 0.95rem;
-    }
-
-    .nav-links a:hover { color: var(--text); }
-
-    .button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.5rem;
-      border: 1px solid var(--border);
+    .menu a {
+      padding: 0.45rem 0.8rem;
       border-radius: 999px;
-      padding: 0.8rem 1.1rem;
-      background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.03));
-      color: var(--text);
-      box-shadow: var(--shadow);
-      transition: transform 0.18s ease, border-color 0.18s ease;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.72);
+      color: var(--muted);
+      font-size: 0.92rem;
+      transition: 0.18s ease;
     }
 
-    .button:hover {
-      transform: translateY(-1px);
-      border-color: rgba(124,199,255,0.5);
-    }
-
-    .button.primary {
-      background: linear-gradient(135deg, rgba(124,199,255,0.22), rgba(142,240,192,0.18));
-      border-color: rgba(124,199,255,0.35);
+    .menu a:hover {
+      background: #fff;
+      color: var(--accent);
+      border-color: rgba(127,79,36,0.25);
     }
 
     .hero {
-      padding: 5rem 0 3rem;
+      padding: 4rem 0 2.5rem;
     }
 
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.25fr 0.95fr;
-      gap: 2rem;
-      align-items: center;
+    .hero-card {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      box-shadow: var(--shadow);
+      padding: 2rem;
     }
 
     .eyebrow {
       display: inline-block;
-      padding: 0.35rem 0.7rem;
-      border: 1px solid var(--border);
+      margin-bottom: 0.8rem;
+      padding: 0.35rem 0.75rem;
       border-radius: 999px;
+      border: 1px solid rgba(127,79,36,0.2);
       color: var(--accent);
-      font-size: 0.85rem;
-      margin-bottom: 1rem;
-      background: rgba(255,255,255,0.04);
+      background: rgba(176,137,104,0.08);
+      font-size: 0.9rem;
     }
 
     h1, h2, h3 { line-height: 1.1; margin: 0 0 0.75rem; }
-    h1 { font-size: clamp(2.4rem, 4vw, 4.6rem); }
-    h2 { font-size: clamp(1.8rem, 3vw, 2.8rem); }
-    h3 { font-size: 1.2rem; }
+    h1 { font-size: clamp(2.5rem, 5vw, 4.3rem); }
+    h2 { font-size: clamp(1.8rem, 3vw, 2.5rem); }
+    h3 { font-size: clamp(1.4rem, 2vw, 1.8rem); color: var(--accent); }
 
     .lead {
-      color: var(--muted);
+      max-width: 68ch;
       font-size: 1.08rem;
-      max-width: 60ch;
+      color: var(--muted);
+      margin: 0;
     }
 
-    .hero-actions {
-      display: flex;
-      gap: 0.9rem;
-      flex-wrap: wrap;
-      margin-top: 1.5rem;
+    .sections {
+      display: grid;
+      gap: 1.5rem;
+      padding-bottom: 3rem;
     }
 
-    .hero-card, .card {
-      background: linear-gradient(180deg, rgba(24,34,71,0.95), rgba(18,25,54,0.96));
+    .cultivar {
+      scroll-margin-top: 100px;
+      background: rgba(255,250,242,0.9);
       border: 1px solid var(--border);
       border-radius: var(--radius);
       box-shadow: var(--shadow);
-    }
-
-    .hero-card {
-      padding: 1rem;
-    }
-
-    .hero-card-inner {
-      min-height: 360px;
-      border-radius: calc(var(--radius) - 6px);
-      border: 1px dashed rgba(255,255,255,0.12);
-      background:
-        linear-gradient(180deg, rgba(124,199,255,0.07), rgba(142,240,192,0.03)),
-        rgba(255,255,255,0.02);
       padding: 1.2rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
     }
 
-    .stats {
+    .cultivar-row {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 0.8rem;
-      margin-top: 1rem;
+      grid-template-columns: minmax(320px, 520px) 1fr;
+      gap: 1.35rem;
+      align-items: center;
     }
 
-    .stat {
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(255,255,255,0.08);
-      border-radius: 16px;
-      padding: 0.9rem;
+    .image-wrap {
+      overflow: hidden;
+      border-radius: 18px;
+      background: #ebe1d0;
+      border: 1px solid var(--border);
     }
 
-    .stat strong {
-      display: block;
-      font-size: 1.3rem;
-      margin-bottom: 0.25rem;
+    .image-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
 
-    section {
-      padding: 2rem 0;
+    .content {
+      padding: 0.4rem 0.3rem;
     }
 
-    .section-header {
-      margin-bottom: 1.25rem;
-    }
-
-    .section-header p {
+    .content p {
       margin: 0;
       color: var(--muted);
-      max-width: 65ch;
-    }
-
-    .grid-3 {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1rem;
-    }
-
-    .card {
-      padding: 1.2rem;
-    }
-
-    .card p, .muted {
-      color: var(--muted);
-    }
-
-    .feature-icon {
-      width: 2.5rem;
-      height: 2.5rem;
-      border-radius: 12px;
-      display: inline-grid;
-      place-items: center;
-      background: rgba(124,199,255,0.14);
-      border: 1px solid rgba(124,199,255,0.2);
-      margin-bottom: 0.8rem;
-    }
-
-    .two-col {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1rem;
-    }
-
-    .steps {
-      display: grid;
-      gap: 0.9rem;
-    }
-
-    .step {
-      display: grid;
-      grid-template-columns: auto 1fr;
-      gap: 0.9rem;
-      align-items: start;
-    }
-
-    .step-number {
-      width: 2rem;
-      height: 2rem;
-      border-radius: 999px;
-      display: grid;
-      place-items: center;
-      font-weight: 700;
-      background: rgba(142,240,192,0.14);
-      color: var(--accent-2);
-      border: 1px solid rgba(142,240,192,0.22);
-    }
-
-    .code-block {
-      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-      font-size: 0.92rem;
-      white-space: pre-wrap;
-      background: rgba(0,0,0,0.22);
-      border: 1px solid rgba(255,255,255,0.08);
-      border-radius: 16px;
-      padding: 1rem;
-      overflow-x: auto;
+      font-size: 1rem;
     }
 
     .footer {
-      padding: 2.5rem 0 4rem;
+      padding: 2rem 0 3rem;
       color: var(--muted);
       text-align: center;
+      font-size: 0.96rem;
+    }
+
+    .footer a {
+      color: var(--accent);
+      text-decoration: underline;
     }
 
     @media (max-width: 900px) {
-      .hero-grid,
-      .grid-3,
-      .two-col,
-      .stats {
-        grid-template-columns: 1fr;
+      .nav-inner {
+        align-items: flex-start;
+        flex-direction: column;
       }
 
-      .hero {
-        padding-top: 3.5rem;
+      .menu {
+        justify-content: flex-start;
+      }
+
+      .cultivar-row {
+        grid-template-columns: 1fr;
       }
     }
   </style>
@@ -288,184 +196,149 @@
 <body>
   <header class="nav">
     <div class="container nav-inner">
-      <a href="#top" class="brand">YourSite</a>
-      <nav class="nav-links" aria-label="Primary navigation">
-        <a href="#about">About</a>
-        <a href="#features">Features</a>
-        <a href="#projects">Projects</a>
-        <a href="#setup">Setup</a>
-        <a class="button" href="https://github.com/yourusername/your-repo" target="_blank" rel="noreferrer">GitHub</a>
+      <a href="#top" class="brand">Rodale Institute Chestnut Orchard</a>
+      <nav class="menu" aria-label="Cultivar sections">
+        <a href="#amy">Amy</a>
+        <a href="#au-cropper">AU Cropper</a>
+        <a href="#gideon">Gideon</a>
+        <a href="#hong-kong">Hong Kong</a>
+        <a href="#homestead">AU Homestead</a>
+        <a href="#mossbarger">Mossbarger</a>
+        <a href="#peach">Peach</a>
+        <a href="#payne">Payne</a>
+        <a href="#qing">Qing</a>
+        <a href="#sleeping-giant">Sleeping Giant</a>
+        <a href="#yixin-large">Yixin Large Nut</a>
       </nav>
     </div>
   </header>
 
   <main id="top">
     <section class="hero">
-      <div class="container hero-grid">
-        <div>
-          <span class="eyebrow">GitHub Pages Starter</span>
-          <h1>Launch a clean static site in minutes.</h1>
-          <p class="lead">
-            This single-file template is built for GitHub Pages. Replace the text, update the links,
-            and publish your portfolio, project page, lab website, or documentation hub.
-          </p>
-          <div class="hero-actions">
-            <a class="button primary" href="#setup">Get Started</a>
-            <a class="button" href="#projects">View Sections</a>
-          </div>
-        </div>
-
+      <div class="container">
         <div class="hero-card">
-          <div class="hero-card-inner">
-            <div>
-              <h3>Template highlights</h3>
-              <p class="muted">Responsive layout, built-in navigation, reusable content cards, and a quick deployment guide.</p>
-            </div>
-            <div class="stats">
-              <div class="stat">
-                <strong>1</strong>
-                <span class="muted">HTML file</span>
-              </div>
-              <div class="stat">
-                <strong>0</strong>
-                <span class="muted">Dependencies</span>
-              </div>
-              <div class="stat">
-                <strong>100%</strong>
-                <span class="muted">GitHub Pages ready</span>
-              </div>
-            </div>
-          </div>
+          <span class="eyebrow">Cultivar Showcase</span>
+          <h1>Featured Chestnuts in the Orchard</h1>
+          <p class="lead">Explore a horizontal showcase of selected chestnut cultivars with quick jump links from the top menu. Each section pairs cultivar notes with a representative nut image for easy browsing.</p>
         </div>
       </div>
     </section>
 
-    <section id="about">
-      <div class="container">
-        <div class="section-header">
-          <h2>About this template</h2>
-          <p>Use this section to explain who you are, what the site is for, and what visitors should do next.</p>
-        </div>
-        <div class="two-col">
-          <div class="card">
-            <h3>Good for</h3>
-            <p>Portfolios, project pages, personal labs, faculty profiles, research groups, and lightweight documentation sites.</p>
-          </div>
-          <div class="card">
-            <h3>Edit quickly</h3>
-            <p>Swap the site title, update the sections, change the GitHub link, and publish by pushing <code>index.html</code> to your repository.</p>
+    <section class="sections container">
+      <article class="cultivar" id="amy">
+        <div class="cultivar-row">
+          <div class="image-wrap"><img src="assets/images/amy-2.jpg" alt="Amy chestnuts with ruler scale" /></div>
+          <div class="content">
+            <h3>Amy</h3>
+            <p>‘Amy’ (C. mollissima) is a G. Miller selection (72-400) from a 1972 planting of C. mollissima seedlings in Carrollton, Ohio, from the same planting that produced ‘Miller 72-76’, ‘Gideon’, and ‘Peach’. Its mother was acquired from Ackerman Nursery, Bridgman, Michigan, in 1957. ‘Amy’ displayed greater cold hardiness than most other C. mollissima trialed in Carrollton and breaks bud relatively early in spring. It consistently bears high yields. DNA markers indicate that it is approximately one-eighth Japanese, likely contributed by its unknown father. Its nuts are small to medium, peel well, and have an excellent flavor. ‘Amy’ matures earlier than ‘Eaton’ and ‘Sleeping Giant’, though nut size tends to decline with mature bearing.</p>
           </div>
         </div>
-      </div>
-    </section>
+      </article>
 
-    <section id="features">
-      <div class="container">
-        <div class="section-header">
-          <h2>Features</h2>
-          <p>A simple structure that is easy to customize without a framework.</p>
-        </div>
-        <div class="grid-3">
-          <article class="card">
-            <div class="feature-icon">⚡</div>
-            <h3>Fast</h3>
-            <p>No build step required. Open locally and deploy directly to GitHub Pages.</p>
-          </article>
-          <article class="card">
-            <div class="feature-icon">📱</div>
-            <h3>Responsive</h3>
-            <p>Sections stack cleanly on smaller screens and keep navigation accessible.</p>
-          </article>
-          <article class="card">
-            <div class="feature-icon">🧩</div>
-            <h3>Reusable</h3>
-            <p>Copy cards, steps, or sections as needed to grow the site without reworking the layout.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="projects">
-      <div class="container">
-        <div class="section-header">
-          <h2>Projects or content blocks</h2>
-          <p>Replace these cards with your projects, publications, tools, datasets, or updates.</p>
-        </div>
-        <div class="grid-3">
-          <article class="card">
-            <h3>Project One</h3>
-            <p>Brief description of the project, what it does, and why it matters.</p>
-          </article>
-          <article class="card">
-            <h3>Project Two</h3>
-            <p>Add a link, image, or short summary for a second featured item.</p>
-          </article>
-          <article class="card">
-            <h3>Project Three</h3>
-            <p>Use this area for a paper, blog post, service, or technical resource.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="setup">
-      <div class="container two-col">
-        <div>
-          <div class="section-header">
-            <h2>GitHub Pages setup</h2>
-            <p>These are the minimal steps needed to publish this file as a website.</p>
-          </div>
-          <div class="steps">
-            <div class="step">
-              <div class="step-number">1</div>
-              <div>
-                <h3>Create a repository</h3>
-                <p class="muted">Use a repository named <code>yourusername.github.io</code> for a user site, or any repo name for a project site.</p>
-              </div>
-            </div>
-            <div class="step">
-              <div class="step-number">2</div>
-              <div>
-                <h3>Add this file as <code>index.html</code></h3>
-                <p class="muted">Commit it to the repository root, or place it in a <code>docs/</code> folder if you prefer that Pages source.</p>
-              </div>
-            </div>
-            <div class="step">
-              <div class="step-number">3</div>
-              <div>
-                <h3>Enable GitHub Pages</h3>
-                <p class="muted">In repository settings, select the branch and folder to publish, then save.</p>
-              </div>
-            </div>
-            <div class="step">
-              <div class="step-number">4</div>
-              <div>
-                <h3>Customize content</h3>
-                <p class="muted">Edit text, colors, and links. Add sections for publications, contact info, or downloads.</p>
-              </div>
-            </div>
+      <article class="cultivar" id="au-cropper">
+        <div class="cultivar-row">
+          <div class="image-wrap"><img src="assets/images/au-cropper.jpg" alt="AU Cropper chestnuts with ruler scale" /></div>
+          <div class="content">
+            <h3>AU Cropper</h3>
+            <p>‘AU Cropper’ (C. mollissima) was released by Auburn University in 1980. The cultivar produces heavy crops of decent-quality, medium-size chestnuts. Average nut size can decrease moderately in larger crop years. In Missouri, consistent mature bearing began 8 years from grafting and increased incrementally from 2004 to 2010.</p>
           </div>
         </div>
+      </article>
 
-        <div class="card">
-          <h3>Suggested file structure</h3>
-          <div class="code-block">your-repo/
-├── index.html
-├── assets/
-│   ├── images/
-│   └── files/
-└── README.md</div>
-          <h3 style="margin-top: 1rem;">Tip</h3>
-          <p class="muted">If this is a project site instead of a user site, your URL will usually be <code>https://yourusername.github.io/your-repo/</code>.</p>
+      <article class="cultivar" id="gideon">
+        <div class="cultivar-row">
+          <div class="image-wrap"><img src="assets/images/gideon.jpg" alt="Gideon chestnuts with ruler scale" /></div>
+          <div class="content">
+            <h3>Gideon</h3>
+            <p>‘Gideon’ (C. mollissima) is a G. Miller selection (72-283) from the same seedlot that produced ‘Amy’ and ‘Peach’. It has been a consistent bearer compared with most other C. mollissima trialed in Carrollton, Ohio, and its offspring have also been consistently superior. The cultivar ripens during mid-season, slightly later than ‘Peach’. Nuts are typically 12–18 g, with a uniform and appealing shape.</p>
+          </div>
         </div>
-      </div>
+      </article>
+
+      <article class="cultivar" id="hong-kong">
+        <div class="cultivar-row">
+          <div class="image-wrap"><img src="assets/images/hong-kong.jpg" alt="Hong Kong chestnuts with ruler scale" /></div>
+          <div class="content">
+            <h3>Hong Kong</h3>
+            <p>‘Hong Kong’ (C. mollissima) is considered the best seedling selection from a seedlot from Hong Kong. The tree is pollen-fertile and drops its nuts during the early to mid-season. The nuts peel well and have very good flavor with a pleasant sweetness. Grafted trees at the University of Missouri grew vigorously and had fair productivity without blight. Nuts from ramets at the UMCA are consistently medium to large in size.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="cultivar" id="homestead">
+        <div class="cultivar-row">
+          <div class="image-wrap"><img src="assets/images/homestead.jpg" alt="AU Homestead chestnuts with ruler scale" /></div>
+          <div class="content">
+            <h3>AU Homestead</h3>
+            <p>‘AU Homestead’ (C. mollissima) is a selection from a USDA cooperative planting established at Auburn University in 1954 and released in 1980. It is late-ripening, has a long ripening period, and is considered better suited for household use than commercial plantings. The nut is noted for exceptionally fine flavor and a glutinous quality preferred in China, contributing a rich and complex mouthfeel. ‘AU Homestead’ often tastes much better roasted than raw, and nut size fluctuates with crop size and tree age.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="cultivar" id="mossbarger">
+        <div class="cultivar-row">
+          <div class="image-wrap"><img src="assets/images/mossbarger.jpg" alt="Mossbarger chestnuts with ruler scale" /></div>
+          <div class="content">
+            <h3>Mossbarger</h3>
+            <p>‘Mossbarger’ (C. mollissima) is a 1983 selection from Kentucky. The cultivar is presumed to be pure C. mollissima, though other species may be present in its background. Although the tree looks predominantly like C. mollissima, ‘Mossbarger’ and its offspring have unusually thick stems and branches. Nuts have very good flavor, whether raw or cooked. The cultivar consistently yielded large crops in UMCA and UTC trials, and ramets are quite vigorous and precocious compared with most C. mollissima selections.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="cultivar" id="peach">
+        <div class="cultivar-row">
+          <div class="image-wrap"><img src="assets/images/peach.jpg" alt="Peach chestnuts with ruler scale" /></div>
+          <div class="content">
+            <h3>Peach</h3>
+            <p>‘Peach’ (C. mollissima) is a G. Miller selection from a 1972 planting of seedlings in Carrollton, Ohio, from the same planting that produced ‘Miller 72-76’, ‘Amy’, and ‘Gideon’. Its primary attribute is consistent production of medium to large nuts with distinct “peach fuzz” on the shell. The tree tends to fall flower, which can reduce the next year’s yield. Flavor is considered typical for the species.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="cultivar" id="payne">
+        <div class="cultivar-row">
+          <div class="image-wrap"><img src="assets/images/payne.jpg" alt="Payne chestnuts with ruler scale" /></div>
+          <div class="content">
+            <h3>Payne</h3>
+            <p>‘Payne’ (C. mollissima), also known as Byron 3-3, was selected from the old orchard at the Southeastern Fruit and Tree Nut Research Laboratory in Byron, Georgia. It was chosen for its large nuts, although grafted trees have not always reproduced the nut size of the original ortet. In Missouri, nut size decreases from about 19 g to 10–13 g as trees mature. It was one of the largest-fruited and highest-yielding C. mollissima cultivars in the UTC trial. Nuts drop from mid- to late season and have good flavor.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="cultivar" id="qing">
+        <div class="cultivar-row">
+          <div class="image-wrap"><img src="assets/images/qing.jpg" alt="Qing chestnuts with ruler scale" /></div>
+          <div class="content">
+            <h3>Qing</h3>
+            <p>‘Qing’ (C. mollissima) was discovered as a yard tree in Hickory, Kentucky, where it was planted sometime between the late 1950s and early 1960s. Its origin is unknown, but it may have originated from trees distributed by the Tennessee Valley Authority. Compared with adjacent C. mollissima trees, it is a much smaller tree with a desirable loose canopy architecture. It is a heavy producer, and its shiny dark-brown nuts fall during the early to mid-season. ‘Qing’ nuts have good flavor, are exceptionally sweet, store very well, and show minimal blossom end rot. Grafts often experience delayed failure or poor growth, but the cultivar has performed highly consistently in UMCA trials.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="cultivar" id="sleeping-giant">
+        <div class="cultivar-row">
+          <div class="image-wrap"><img src="assets/images/sleeping.jpg" alt="Sleeping Giant chestnuts with ruler scale" /></div>
+          <div class="content">
+            <h3>Sleeping Giant</h3>
+            <p>‘Sleeping Giant’ (C. mollissima × C. crenata × C. dentata) is a seedling derived from a cross made at the Connecticut Agricultural Experiment Station in 1937. It ripens during early to mid-season. Nuts with good flavor are typically 11 to 12 g in northern environments and 13 to 16 g in New Franklin, Missouri. Yields and nut size are relatively consistent, and some growers indicate that the cultivar transfers well between environments. Blossom end rot susceptibility has been observed in Missouri.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="cultivar" id="yixin-large">
+        <div class="cultivar-row">
+          <div class="image-wrap"><img src="assets/images/yixin-large.jpg" alt="Yixin Large Nut chestnuts with ruler scale" /></div>
+          <div class="content">
+            <h3>Yixin Large Nut</h3>
+            <p>‘Yixian Large Nut’ (C. mollissima) is a selection made in 1993 by M. Nave. The seedling originated from a seedlot of large nuts from Yixian, Anhui Province, China, and is possibly a sibling of ‘Shing’. True to its name, the cultivar produces a large nut, reaching about 20 g in Missouri, with good flavor, although nut size varies by environment. The pellicle removes well, and the nuts drop over a long period from early to late season. More evaluations in the East and Midwest are still needed.</p>
+          </div>
+        </div>
+      </article>
     </section>
   </main>
 
-  <footer class="footer">
-    <div class="container">
-      <p>Built as a starter template for GitHub Pages. Replace this footer with your name, lab, organization, or contact links.</p>
-    </div>
+  <footer class="footer container">
+    <p>Cultivar descriptions adapted from the Chestnut Improvement Network cultivar portfolio. Visit the source at <a href="https://www.chestnutimprovementnetwork.com/portfolio_cat/cultivars/" target="_blank" rel="noreferrer">Chestnut Improvement Network</a>.</p>
   </footer>
 </body>
 </html>
